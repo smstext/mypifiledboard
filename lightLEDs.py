@@ -3,7 +3,7 @@
 # Button press loops through LEDs like this (0 is led off, 1 is led on): 000, 100, 110, 111, 011, 001, 000, 100, 110, 111, 011, 001, 000 etc.
 # Author : Zachary Igielman
 
-import RPi.GPIO as GPIO, time
+import RPi.GPIO as GPIO, time, sys
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -25,10 +25,14 @@ array=[[0,0,0],[1,0,0],[1,1,0],[1,1,1],[0,1,1],[0,0,1]]
 
 a=0
 
-while True:
-  while GPIO.input(26)==1:
-    time.sleep(0.1)
-  setLEDs(a%6)
-  a=a+1
-  while GPIO.input(26)==0:
-    time.sleep(0.1)
+try:
+  while True:
+    while GPIO.input(26)==1:
+      time.sleep(0.1)
+    setLEDs(array[a%6])
+    a=a+1
+    while GPIO.input(26)==0:
+      time.sleep(0.1)
+finally:
+  GPIO.cleanup()
+  sys.exit(0)
