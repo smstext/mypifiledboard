@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO, time, sys
 
 GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(7, GPIO.OUT) #red
+GPIO.setup(11, GPIO.OUT) #red
 GPIO.setup(15, GPIO.OUT) #amber
 GPIO.setup(21, GPIO.OUT) #green
 
