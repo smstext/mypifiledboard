@@ -8,17 +8,17 @@ import RPi.GPIO as GPIO, time, sys
 GPIO.setmode(GPIO.BOARD)
 
 GPIO.setup(11, GPIO.OUT) #red
-GPIO.setup(15, GPIO.OUT) #amber
+GPIO.setup(13, GPIO.OUT) #amber
 GPIO.setup(21, GPIO.OUT) #green
 GPIO.setup(26, GPIO.IN) #button
 
-GPIO.output(7, GPIO.LOW)
-GPIO.output(15, GPIO.LOW)
+GPIO.output(11, GPIO.LOW)
+GPIO.output(13, GPIO.LOW)
 GPIO.output(21, GPIO.LOW)
 
 def setLEDs(tempArray):
-  GPIO.output(7, tempArray[0])
-  GPIO.output(15, tempArray[1])
+  GPIO.output(11, tempArray[0])
+  GPIO.output(13, tempArray[1])
   GPIO.output(21, tempArray[2])
   
 array=[[0,0,0],[1,0,0],[1,1,0],[1,1,1],[0,1,1],[0,0,1]]
