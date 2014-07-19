@@ -1,7 +1,15 @@
-Red gpio7 bcm4 header 7
+Red:
+GPIO17
+Physical Pin 11
 
-Amber gpio3 bcm22 header 15
+Amber:
+GPIO27
+Physical Pin 13
 
-Green gpio9 (miso) bcm9 header 21
+Green:
+GPIO9
+Physical Pin 21
 
-Button ce1 bcm7 header 26
+Button:
+GPIO7
+Physical Pin 26
