@@ -11,5 +11,5 @@ GPIO9
 Physical Pin 21
 
 Button:
-GPIO7
-Physical Pin 26
+GPIO4
+Physical Pin 7
